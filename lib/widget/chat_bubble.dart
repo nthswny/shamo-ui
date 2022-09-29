@@ -83,7 +83,7 @@ class ChatBubble extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      'Add to Chart',
+                      'Add to Cart',
                       style: purpleTextStyle,
                     ),
                   ),

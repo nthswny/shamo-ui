@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shamo_ui/models/user_model.dart';
+import 'package:shamo_ui/providers/auth_provider.dart';
 import 'package:shamo_ui/theme.dart';
 import 'package:shamo_ui/widget/product_cart.dart';
 import 'package:shamo_ui/widget/product_tile.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    AuthProvider authProvider = Provider.of<AuthProvider>(context);
+    UserModel user = authProvider.user;
+
     Widget header() {
       return Container(
         margin: EdgeInsets.only(
@@ -22,14 +26,14 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hallo, Alex',
+                    'Hallo, ${user.name}',
                     style: primaryTextStyle.copyWith(
                       fontSize: 24,
                       fontWeight: semiBold,
                     ),
                   ),
                   Text(
-                    '@alexkim',
+                    '@${user.username}',
                     style: thirdTextStyle.copyWith(
                       fontSize: 16,
                     ),
@@ -43,7 +47,7 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage('assets/image_profile.png'),
+                    image: NetworkImage('${user.profilePhotoUrl}'),
                   ),
                 )),
           ],
