@@ -7,25 +7,35 @@ import 'package:shamo_ui/pages/detail_chat_page.dart';
 import 'package:shamo_ui/pages/edit_profile.dart';
 
 import 'package:shamo_ui/pages/home/main_page.dart';
-import 'package:shamo_ui/pages/product_page.dart';
+// import 'package:shamo_ui/pages/product_page.dart';
 import 'package:shamo_ui/pages/sign_in_page.dart';
 import 'package:shamo_ui/pages/sign_up_page.dart';
 import 'package:shamo_ui/pages/splash_page.dart';
 import 'package:shamo_ui/providers/auth_provider.dart';
+import 'package:shamo_ui/providers/cart_provider.dart';
+import 'package:shamo_ui/providers/product_provider.dart';
+import 'package:shamo_ui/providers/wishlist_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
           create: (context) => AuthProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => ProductProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => WishlistProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => CartProvider(),
         ),
       ],
       child: MaterialApp(
@@ -37,7 +47,6 @@ class MyApp extends StatelessWidget {
           '/home': (context) => MainPage(),
           '/detail-chat': (context) => DetailChatPage(),
           '/edit-profile': (context) => EditProfilePage(),
-          '/product': (context) => ProductPage(),
           '/cart': (context) => CartPage(),
           '/checkout': (context) => CheckoutPage(),
           '/checkout-success': (context) => CheckoutSuccessPage(),
