@@ -1,9 +1,6 @@
-// melakukan request ke backend
-
 import 'dart:convert';
-
-import 'package:shamo_ui/models/user_model.dart';
 import 'package:http/http.dart' as http;
+import 'package:shamo_ui/models/user_model.dart';
 
 class AuthService {
   String baseUrl = 'https://shamo-backend.buildwithangga.id/api';
@@ -38,7 +35,8 @@ class AuthService {
 
       return user;
     } else {
-      throw Exception('Register Failed');
+      print(response.body);
+      throw Exception('Register Failed!');
     }
   }
 
@@ -68,7 +66,7 @@ class AuthService {
 
       return user;
     } else {
-      throw Exception('Login Failed');
+      throw Exception('Login Failed!');
     }
   }
 }

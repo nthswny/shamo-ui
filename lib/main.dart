@@ -14,6 +14,7 @@ import 'package:shamo_ui/pages/splash_page.dart';
 import 'package:shamo_ui/providers/auth_provider.dart';
 import 'package:shamo_ui/providers/cart_provider.dart';
 import 'package:shamo_ui/providers/product_provider.dart';
+import 'package:shamo_ui/providers/transaction_provider.dart';
 import 'package:shamo_ui/providers/wishlist_provider.dart';
 
 void main() {
@@ -36,6 +37,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (context) => CartProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => TransactionProvider(),
         ),
       ],
       child: MaterialApp(

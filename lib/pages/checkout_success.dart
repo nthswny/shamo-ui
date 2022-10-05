@@ -47,7 +47,10 @@ class CheckoutSuccessPage extends StatelessWidget {
               height: 44,
               margin: EdgeInsets.only(top: 30),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/home', (route) => false);
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: primaryColor,
                   shape: RoundedRectangleBorder(
