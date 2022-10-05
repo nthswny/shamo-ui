@@ -8,8 +8,8 @@ class ProductModel {
   late String description;
   late String? tags;
   late CategoryModel category;
-  late DateTime createdAt;
-  late DateTime updatedAt;
+  late DateTime? createdAt;
+  late DateTime? updatedAt;
   late List<GalleryModel> galleries;
 
   ProductModel({
@@ -52,3 +52,5 @@ class ProductModel {
     };
   }
 }
+
+class UninitializedProductModel extends ProductModel {}

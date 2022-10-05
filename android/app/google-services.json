@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "404552138922",
+    "project_id": "shamo-568c5",
+    "storage_bucket": "shamo-568c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404552138922:android:ee14b2aa15e5b6d57390d3",
+        "android_client_info": {
+          "package_name": "com.natha.shamo_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404552138922-fpmkfq5ucnoc4irkjimvgvj3tlm8e0mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlWcYHyXVhdG2no9vhOkuifpHFh9AV7lE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404552138922-fpmkfq5ucnoc4irkjimvgvj3tlm8e0mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
