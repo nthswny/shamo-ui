@@ -97,7 +97,7 @@ class _DetailChatPageState extends State<DetailChatPage> {
             ClipRRect(
               borderRadius: BorderRadius.circular(12),
               child: Image.network(
-                widget.product.galleries[0].url,
+                widget.product.galleries![0].url,
                 width: 54,
               ),
             ),
@@ -110,7 +110,7 @@ class _DetailChatPageState extends State<DetailChatPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    widget.product.name,
+                    widget.product.name!,
                     style: primaryTextStyle,
                     overflow: TextOverflow.ellipsis,
                   ),
